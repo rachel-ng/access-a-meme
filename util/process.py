@@ -95,7 +95,7 @@ def process_chars():
 
     raw = [i.replace(" ","").split(",") for i in fin.read().split("\n") if i != ""]
     mappings = {i[0]:i[1] for i in raw}
-    print(mappings)
+    #print(mappings)
     return mappings
 
 
