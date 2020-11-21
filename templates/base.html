@@ -76,14 +76,16 @@
         {% if timeline %}
 	  	<div class="container">
             {% for tweet in timeline %}
-            <div class="tweet">
+            <div class="tweet rounded">
 				<h1 class="user">{{ tweet.user.name }} <a href="https://twitter.com/{{tweet.user.screen_name}}">@{{tweet.user.screen_name}}</a></h1>
-				<h3>{{ tweet.text|safe }}</h3>
-				{% if tweet.entities.media %}
+				<div class="tweet_text"> 
+                    {{ tweet.text|safe }}
+				</div>
+                {% if tweet.entities.media %}
 				<div class="alt">
 					{{ tweet.entities.media[0]['classification']}}
-				<div>
-					<img src={{ tweet.entities.media[0].media_url_https}} alt="">
+				</div>
+					<img src={{ tweet.entities.media[0].media_url_https}} alt="" width="100%" height="auto"></img>
 				{% endif %}
              </div>
 	        {% endfor %}

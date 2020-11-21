@@ -38,14 +38,13 @@ nav .navbar-brand {
     padding: 25px;
     background: #15202a;
     border: 1px solid #38434d;
-    border-radius: 5px;
 }
 
 .tweet a{
     color: #8495a3;
 }
 
-h1 .user {
-    margin-bottom: 15px;
+.tweet_text {
+    font-size: 1.75rem;
+    margin-top: 25px;
 }
-
