@@ -115,7 +115,11 @@ def remap (s):
 
 def process_tweets(timeline):
 	for tweet in timeline:
+		if tweet.user.name:
+			#print(tweet.user.name)
+			tweet.user.name=remap(tweet.user.name)
 		if tweet.text:
+			tweet.textold=tweet.text
 			tweet.text=remap(tweet.text)
 			#print(tweet.text)
 	return timeline
