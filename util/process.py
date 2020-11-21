@@ -2,9 +2,13 @@
 
 import sys, os, copy
 import string
+import re
+
+DIR = os.path.dirname(__file__) or '.'
+DIR += '/'
 
 def process_chars():
-    fin = open("chars.txt")
+    fin = open(DIR+"chars.txt")
 
     raw = [i.replace("'","").replace(" ","").split(",") for i in fin.read().split("\n") if i != ""]
     raw = [[j for j in i] for i in raw]
@@ -91,7 +95,7 @@ def print_ind (dct):
 
 
 def process_chars():
-    fin = open("map.csv")
+    fin = open(DIR+"map.csv")
 
     raw = [i.replace(" ","").split(",") for i in fin.read().split("\n") if i != ""]
     mappings = {i[0]:i[1] for i in raw}
@@ -113,9 +117,18 @@ def remap (s):
         n += mappings.get(i,i) 
     return n 
 
-m = "𝔱𝔥𝔦𝔰 𝔦𝔰 𝔫𝔬𝔱 𝔞𝔠𝔠𝔢𝔰𝔰𝔦𝔟𝔩𝔢! \n ⓘ  𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝘀𝗼𝘂𝗿𝗰𝗲𝘀 𝘀𝘁𝗮𝘁𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗶𝘀 𝗶𝘀 𝘁𝗿𝘂𝗲 \n 𝕥𝕙𝕚𝕤 𝕚𝕤 𝕒𝕔𝕔𝕖𝕤𝕤𝕚𝕓𝕝𝕖! \n ⓘ  𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝘀𝗼𝘂𝗿𝗰𝗲𝘀 𝘀𝘁𝗮𝘁𝗲𝗱 𝘁𝗵𝗮𝘁 𝗶𝘀 𝗳𝗮𝗹𝘀𝗲 𝗮𝗻𝗱 𝗺𝗶𝘀𝗹𝗲𝗮𝗱𝗶𝗻𝗴"
-print(m)
-print(remap(m))
+#m = "𝔱𝔥𝔦𝔰 𝔦𝔰 𝔫𝔬𝔱 𝔞𝔠𝔠𝔢𝔰𝔰𝔦𝔟𝔩𝔢! \n ⓘ  𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝘀𝗼𝘂𝗿𝗰𝗲𝘀 𝘀𝘁𝗮𝘁𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗶𝘀 𝗶𝘀 𝘁𝗿𝘂𝗲 \n 𝕥𝕙𝕚𝕤 𝕚𝕤 𝕒𝕔𝕔𝕖𝕤𝕤𝕚𝕓𝕝𝕖! \n ⓘ  𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝘀𝗼𝘂𝗿𝗰𝗲𝘀 𝘀𝘁𝗮𝘁𝗲𝗱 𝘁𝗵𝗮𝘁 𝗶𝘀 𝗳𝗮𝗹𝘀𝗲 𝗮𝗻𝗱 𝗺𝗶𝘀𝗹𝗲𝗮𝗱𝗶𝗻𝗴"
+#print(m)
+#print(remap(m))
+
+
+def process_tweets(timeline):
+	for tweet in timeline:
+		if tweet.text:
+			tweet.text=remap(tweet.text)
+			#print(tweet.text)
+	return timeline
+
 
 
 
