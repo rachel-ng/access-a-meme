@@ -25,7 +25,7 @@
 
     <!--  https://getbootstrap.com/docs/4.0/components/navbar/ -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="/">access-a-meme</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -76,17 +76,18 @@
         {% if timeline %}
 	  	<div class="container">
             {% for tweet in timeline %}
-				<h1>{{ tweet.user.name }}@{{tweet.user.screen_name}}</h1>
-				<h2>{{tweet.text}}</h2>
-				<br>
+            <div class="tweet">
+				<h1 class="user">{{ tweet.user.name }} <a href="https://twitter.com/{{tweet.user.screen_name}}">@{{tweet.user.screen_name}}</a></h1>
+				<h3>{{ tweet.text|safe }}</h3>
 				{% if tweet.entities.media %}
+				<div class="alt">
 					{{ tweet.entities.media[0]['classification']}}
+				<div>
 					<img src={{ tweet.entities.media[0].media_url_https}} alt="">
 				{% endif %}
-				<br>
-				<br>
-				{% endfor %}
-			{% endif %}
+             </div>
+	        {% endfor %}
+	    {% endif %}
         </div>
     </div>
 
