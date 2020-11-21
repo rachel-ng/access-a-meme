@@ -14,6 +14,8 @@ def root():
 	timeline = twitter.get_timeline()
 	timeline = watson.fake_process_images(timeline)
 	timeline = process.process_tweets(timeline)
+	#for tweet in timeline:
+		#print(tweet)
 	return render_template("base.html", timeline = timeline)
 
 if __name__ == '__main__':

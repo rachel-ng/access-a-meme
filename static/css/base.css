@@ -40,7 +40,11 @@ nav .navbar-brand {
     border: 1px solid #38434d;
 }
 
-.tweet a{
+.user {
+    font-size: 2.5rem;
+}
+
+.user a{
     color: #8495a3;
 }
 
@@ -48,3 +52,7 @@ nav .navbar-brand {
     font-size: 1.75rem;
     margin-top: 25px;
 }
+
+
+
+
