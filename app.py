@@ -19,7 +19,7 @@ def root():
 	return render_template("base.html", timeline = timeline)
 
 @app.route('/garbled')
-def root():
+def garbled():
 	timeline = twitter.get_timeline()
 	return render_template("base.html", timeline = timeline)
 
