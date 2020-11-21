@@ -18,6 +18,12 @@ def root():
 		#print(tweet)
 	return render_template("base.html", timeline = timeline)
 
+@app.route('/garbled')
+def root():
+	timeline = twitter.get_timeline()
+	return render_template("base.html", timeline = timeline)
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run()
