@@ -3,14 +3,8 @@ import json
 from ibm_watson import VisualRecognitionV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
-DIR = os.path.dirname(__file__) or '.'
-DIR += '/'
-
-with open(DIR+'watson.json', 'r') as f:
-	data = json.load(f)
-
-WATSON_KEY = data['API_KEY']
-WATSON_URL = data['URL']
+WATSON_KEY = os.environ['WATSON_API_KEY']
+WATSON_URL = os.environ['WATSON_URL']
 
 def connect_to_watson():
 	authenticator = IAMAuthenticator(WATSON_KEY)

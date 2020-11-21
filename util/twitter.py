@@ -2,17 +2,11 @@ import os
 import json
 import tweepy
 
-DIR = os.path.dirname(__file__) or '.'
-DIR += '/'
+API_KEY = os.environ["TWITTER_API_KEY"]
+API_SECRET_KEY = os.environ["TWITTER_API_SECRET_KEY"]
 
-with open(DIR+'twitter.json', 'r') as f:
-	data = json.load(f)
-
-API_KEY = data["API_KEY"]
-API_SECRET_KEY = data["API_SECRET_KEY"]
-
-ACCESS_TOKEN = data["ACCESS_TOKEN"]
-ACCESS_TOKEN_SECRET = data["ACCESS_TOKEN_SECRET"]
+ACCESS_TOKEN = os.environ["TWITTER_ACCESS_TOKEN"]
+ACCESS_TOKEN_SECRET = os.environ["TWITTER_ACCESS_TOKEN_SECRET"]
 
 def connect_to_twitter():
 	auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY);
