@@ -120,7 +120,10 @@ def process_tweets(timeline):
 			tweet.user.name=remap(tweet.user.name)
 		if tweet.full_text:
 			tweet.textold=tweet.full_text
-			tweet.text=remap(tweet.full_text)
+			tweet.full_text=remap(tweet.full_text)
+			if "https://t.co/" in tweet.full_text: 
+				twt = tweet.full_text.split("https://t.co/")
+				tweet.full_text = twt[0] + ((twt[1]+" ").split(" ",1))[-1]
 			#print(tweet.text)
 	return timeline
 
