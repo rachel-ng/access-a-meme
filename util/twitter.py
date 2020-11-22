@@ -16,5 +16,5 @@ def connect_to_twitter():
 
 def get_timeline():
 	api = connect_to_twitter()
-	timeline = api.home_timeline()
+	timeline = api.home_timeline(tweet_mode="extended")
 	return timeline
