@@ -118,9 +118,9 @@ def process_tweets(timeline):
 		if tweet.user.name:
 			#print(tweet.user.name)
 			tweet.user.name=remap(tweet.user.name)
-		if tweet.text:
-			tweet.textold=tweet.text
-			tweet.text=remap(tweet.text)
+		if tweet.full_text:
+			tweet.textold=tweet.full_text
+			tweet.text=remap(tweet.full_text)
 			#print(tweet.text)
 	return timeline
 
