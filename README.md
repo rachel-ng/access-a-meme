@@ -10,7 +10,9 @@ we love memes! but those "Official sources stated that is false and misleading" 
 
 fonted display names, bios, and tweets? inaccessible. 
 
-let's make it so that people who use screenreaders can enjoy these things with us, rather than be bombarded with a math equation or silence. 
+what good is a meme that we can't all enjoy? 
+
+let's make it so that people who use screenreaders can enjoy these things with us, rather than be bombarded with a math equation or a foreign language... or just awkward blanks and strange silence
 
 images too! alt text isn't used often enough (and we don't really cover it in the video,,) and we need more of it
 
