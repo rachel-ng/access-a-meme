@@ -2,6 +2,8 @@
 
 demo @ https://youtu.be/gAMH2hTDOB8
 
+<img src="https://github.com/rachel-ng/access-a-meme/blob/main/static/img/bonus_meme.jpg" alt="meme with 'access-a-meme' shoving 'this text' with weird characters"></img>
+
 ## Inspiration
 
 we love memes! but those "Official sources stated that is false and misleading" tweets? inaccessible. 
