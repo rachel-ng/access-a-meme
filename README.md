@@ -1,6 +1,6 @@
 # access a meme 
 
-demo @ https://youtu.be/gAMH2hTDOB8
+demo @ https://youtu.be/nuS0arUqUBU
 
 <img src="https://github.com/rachel-ng/access-a-meme/blob/main/static/img/bonus_meme.jpg" alt="meme with 'access-a-meme' shoving 'this text' with weird characters"></img>
 
@@ -61,3 +61,5 @@ and better image analysis, we were originally thinking of incorporating data fro
 
 
 # we're doing this so very last minute and apologize for our errors! 
+
+og demo https://youtu.be/gAMH2hTDOB8
