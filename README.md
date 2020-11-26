@@ -32,7 +32,7 @@ add a (bad) description of what's going on images!
 characters originally "borrowed" from https://lingojam.com/FancyTextGenerator
 we remapped them to their corresponding alphanumeric characters and tossed it into a csv 
 
-the web app spits out a user timeline (specifically @racheloniine's) and "translates" all fancy text to normal text
+the web app spits out a user timeline and "translates" all fancy text to normal text
 
 ## Challenges we ran into
 
