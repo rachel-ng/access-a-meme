@@ -12,7 +12,7 @@ app.secret_key = os.urandom(32)
 @app.route('/')
 def root():
 	timeline = twitter.get_timeline()
-	timeline = watson.process_images(timeline)
+	timeline = watson.fake_process_images(timeline)
 	timeline = process.process_tweets(timeline)
 	#for tweet in timeline:
 		#print(tweet)
