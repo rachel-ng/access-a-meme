@@ -66,9 +66,11 @@
                     {{ tweet.full_text|safe }}
 				</div>
                 {% if tweet.entities.media %}
+                <!--
 				<div class="alt">
 					{{ tweet.entities.media[0]['classification']}}
 				</div>
+                -->
 			    <img src={{ tweet.entities.media[0].media_url_https}} alt="" width="100%" height="auto"></img>
 				{% endif %}
              </div>
